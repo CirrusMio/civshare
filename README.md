@@ -10,7 +10,7 @@ You may want to install the markdown syntax for vim:
     http://www.vim.org/scripts/script.php?script_id=2882
 
 -->
-# Civshare: A CivChoice Mercahnt Gateway Client for Ruby
+# Civshare: A CivChoice Merchant Gateway Client for Ruby
 
 ## CivChoice
 
