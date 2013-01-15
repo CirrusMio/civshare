@@ -70,16 +70,17 @@ a corporate gift program.
 charity_id = 7 # local food bank
 merchant_id = 27 # my account number
 
-client = Civshare.new(merchant_id, "secret_key")
+client = Civshare.new("secret_key")
 
 # for test mode
 client.set_url 'https://devsite.cirrusmio.com/merchant-test'
 
 report = []
 unrewarded_purchases.each do |p|
-  response = client.transact email: p.email,
-                             amount: p.reward_amount,
-                             default_charity: charity_id 
+  response = client.transact customer_email: p.email,
+                             quantity: p.reward_amount,
+                             default_recipient_id: charity_id,
+                             merchant_id: merchant_id
   if response.success?
     p.rewarded
   else

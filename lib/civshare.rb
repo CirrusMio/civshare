@@ -16,6 +16,7 @@ class Civshare
   end
 
   def transact values
+    values.merge!(merchant_id: @merchant)
     require_keys values, :merchant_id, :customer_email, :quantity
     limit_keys values, :merchant_id, :customer_email, :quantity,
                        :customer_name, :default_recipient_id
@@ -47,7 +48,7 @@ class Civshare
     data = "#{quantity}|#{email}"
     sha256 = OpenSSL::Digest::SHA256.new
     hmac = OpenSSL::HMAC.digest(sha256, @secret, data)
-    Base64.urlsave_encode(hmac)
+    Base64.urlsafe_encode64(hmac)
   end
 
   def request url, values
