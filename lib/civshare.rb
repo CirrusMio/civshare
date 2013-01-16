@@ -54,7 +54,15 @@ class Civshare
   def request url, values
     params = {transaction: values.to_json}
     uri = URI.parse(@url)
-    response = Net::HTTP.post_form(uri, params)
+    connection = Net::HTTP.new(uri.host, uri.port)
+    if uri.scheme == 'https'
+      connection.use_ssl = true
+      connection.verify_mode = OpenSSL::SSL::VERIFY_PEER
+    end
+    request = Net::HTTP::Post.new(uri.request_uri)
+    request['Accept'] = 'application/json'
+    request.set_form_data params
+    response = connection.request(request)
     WrappedResponse.new(response)
   end
 
