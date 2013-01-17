@@ -70,7 +70,7 @@ a corporate gift program.
 charity_id = 7 # local food bank
 merchant_id = 27 # my account number
 
-client = Civshare.new("secret_key")
+client = Civshare.new('secret_key')
 
 # for test mode
 client.set_url 'https://devsite.cirrusmio.com/merchant-test'
@@ -89,6 +89,17 @@ unrewarded_purchases.each do |p|
 end
 p report
 ```
+
+## Testing
+
+You can run any transaction in test mode.  This requires using the secret key
+for your test mode account, and specifying the `test` parameter.
+
+```ruby
+client = Civshare.new('test_account_key')
+response = client.transact(params_hash.merge(test: true))
+```
+
 
 ## Support
 
