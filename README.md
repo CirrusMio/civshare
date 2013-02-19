@@ -14,7 +14,7 @@ You may want to install the markdown syntax for vim:
 
 ## CivChoice
 
-CivChoice allows managment of chritable giving activities.  Funding your
+CivChoice allows management of charitable giving activities.  Funding your
 account generates an immediate tax deductible contribution to a nonprofit, and
 issues Civ at a rate of 1:1 for each dollar you put in.  The Civ are used as
 digital currency to move your real dollars to support the causes you care
@@ -33,7 +33,7 @@ The benefits of this approach are
   schedule funding around optimal tax benefits and even carry a balance
   between tax years
 
-* impact: Civ can be used for any charitable cause by any nonprofit, supporing
+* impact: Civ can be used for any charitable cause by any nonprofit, supporting
   restricted giving and accountability for nonprofits (over 1 million good
   causes are currently in the CivChoice catalog).
 
@@ -47,7 +47,7 @@ email to the desired recipient.
 The gift card, if left unclaimed, will be contributed to the default charity
 you specify after 30 days.  During the 30 day window the recipient can claim
 the gift using a code supplied in the card, and decide to direct the funds to
-their favorite nonprofit instead of the default.  Regardless of who recieves
+their favorite nonprofit instead of the default.  Regardless of who receives
 the final benefit, the merchant receives the benefit of the tax deduction.
 
 This program can be used to incentivise purchases, as a loyalty program, or as
