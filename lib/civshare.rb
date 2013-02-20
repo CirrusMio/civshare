@@ -19,7 +19,7 @@ class Civshare
     values.merge!(merchant_id: @merchant)
     require_keys values, :merchant_id, :customer_email, :quantity
     limit_keys values, :merchant_id, :customer_email, :quantity,
-                       :customer_name, :default_recipient_id
+                       :customer_name, :default_recipient_id, :is_test
     signature = sign(values[:quantity], values[:customer_email])
     request(@url, values.merge(signature: signature))
   end
