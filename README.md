@@ -97,7 +97,7 @@ for your test mode account, and specifying the `test` parameter.
 
 ```ruby
 client = Civshare.new('test_account_key')
-response = client.transact(params_hash.merge(test: true))
+response = client.transact(params_hash.merge(is_test: true))
 ```
 
 
